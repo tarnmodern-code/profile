@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arcade Profile</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: "Press Start 2P", cursive;
+      background: radial-gradient(circle at top, #1a002b, #000000);
+      color: #fff;
+    }
+
+    /* โหลดฟอนต์แนวเกม */
+    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+    .arcade-card {
+      background: linear-gradient(135deg, #ff00ff, #00ffff, #ffcc00);
+      background-size: 300% 300%;
+      animation: gradientMove 6s infinite alternate;
+      border: 4px solid #fff;
+      border-radius: 20px;
+      padding: 2rem;
+      text-align: center;
+      width: 360px;
+      box-shadow: 0 0 25px #ff00ff, 0 0 40px #00ffff;
+      position: relative;
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: left top; }
+      100% { background-position: right bottom; }
+    }
+
+    .arcade-card img {
+      width: 200px;
+      height: 250px;
+      object-fit: cover;
+      border: 3px solid #fff;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+      box-shadow: 0 0 15px #ffcc00, 0 0 25px #ff00ff;
+    }
+
+    .arcade-card h1 {
+      font-size: 1rem;
+      margin: 1rem 0 0.5rem;
+      color: #ffcc00;
+      text-shadow: 2px 2px #ff00ff, -2px -2px #00ffff;
+    }
+
+    .arcade-card p {
+      font-size: 0.7rem;
+      margin: 0.4rem 0;
+      text-shadow: 1px 1px #000;
+    }
+
+    .arcade-btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.7rem 1rem;
+      background: #000;
+      border: 2px solid #00ffff;
+      border-radius: 8px;
+      color: #00ffff;
+      font-size: 0.7rem;
+      text-decoration: none;
+      transition: 0.2s;
+      box-shadow: 0 0 10px #00ffff, inset 0 0 10px #00ffff;
+    }
+
+    .arcade-btn:hover {
+      background: #00ffff;
+      color: #000;
+      box-shadow: 0 0 20px #ff00ff, 0 0 30px #ffcc00;
+      transform: scale(1.1);
+    }
+
+    /* เอฟเฟกต์ไฟกระพริบรอบการ์ด */
+    .arcade-card::before {
+      content: "";
+      position: absolute;
+      top: -5px;
+      left: -5px;
+      right: -5px;
+      bottom: -5px;
+      border-radius: 25px;
+      border: 3px dashed #fff;
+      animation: borderFlash 1s infinite alternate;
+    }
+
+    @keyframes borderFlash {
+      0% { border-color: #ff00ff; }
+      50% { border-color: #00ffff; }
+      100% { border-color: #ffcc00; }
+    }
+  </style>
+</head>
+<body>
+  <div class="arcade-card">
+    <img src="1009597.JPG" alt="Sugar">
+    <h1>Pratthana Pananu</h1>
+    <p>E-mail: tarn.modern@gmail.com</p>
+    <p>Department: English Major</p>
+    <p>School: Ban Don Daeng School</p>
+    <a href="#" class="arcade-btn">PRESS START</a>
+  </div>
+</body>
+</html>
